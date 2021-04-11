@@ -1,0 +1,43 @@
+.container {
+  padding: 2rem 3rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list {
+  width: 60%;
+  list-style: none;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.item {
+  font-size: 1.6rem;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.border {
+  height: 0.2rem;
+  width: 50%;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.item:first-of-type {
+  font-weight: bold;
+}
+
+.item:first-of-type > .border {
+  background-color: var(--color-Secondary);
+}
+
+.active {
+  font-weight: bold;
+}
