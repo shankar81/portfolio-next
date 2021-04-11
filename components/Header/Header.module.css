@@ -1,5 +1,6 @@
 .container {
-  padding: 2rem 3rem;
+  padding: 2rem 5rem;
+  z-index: 3;
 
   display: flex;
   align-items: center;
@@ -18,24 +19,30 @@
 
 .item {
   font-size: 1.6rem;
+  color: var(--color-Secondary);
   text-decoration: none;
+  text-transform: capitalize;
   border-bottom: 2px solid transparent;
   cursor: pointer;
+  transition: 0.3s all;
 }
 
 .border {
-  height: 0.2rem;
+  height: 0.3rem;
   width: 50%;
   margin: 0 auto;
-  background-color: transparent;
+  background-color: var(--color-Primary);
+  transform: scaleX(0);
+  transition: 0.3s transform;
 }
 
 .item:first-of-type {
   font-weight: bold;
 }
 
+.item:hover > .border,
 .item:first-of-type > .border {
-  background-color: var(--color-Secondary);
+  transform: scaleX(1);
 }
 
 .active {

@@ -37,12 +37,13 @@ html {
   width: 100%;
   scroll-behavior: smooth;
   box-sizing: border-box;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.7;
   height: 100%;
   width: 100%;
   position: relative;

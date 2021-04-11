@@ -10,10 +10,18 @@
   width: 60%;
   height: 100%;
   background-color: var(--color-background);
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar {
   width: 40%;
   height: 100%;
-  background-color: var(--color-Primary);
+  background-image: linear-gradient(
+    to right top,
+    var(--color-Primary) ,
+    var(--color-Secondary)
+  );
 }

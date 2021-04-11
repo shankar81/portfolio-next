@@ -2,6 +2,7 @@ import Head from "next/head";
 import Header from "../components/Header/Header";
 import Home from "../components/Home/Home";
 import classes from "../styles/Home.module.css";
+import Sidebar from "../components/Sidebar/Sidebar";
 
 type HomePageProps = {
   changeTheme: () => void;
@@ -24,7 +25,9 @@ const Landing: React.FC<HomePageProps> = ({}) => {
         <Header />
         <Home />
       </div>
-      <div className={classes.sidebar}></div>
+      <div className={classes.sidebar}>
+        <Sidebar />
+      </div>
     </div>
   );
 };
