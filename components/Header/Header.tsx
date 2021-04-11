@@ -12,6 +12,7 @@ const Header = () => {
   return (
     <div className={classes.container}>
       <Image
+        alt="Personal Portfolio"
         className={classes.image}
         src="/images/logo.svg"
         width={130}

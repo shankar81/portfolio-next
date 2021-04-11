@@ -19,6 +19,7 @@ const Sidebar = () => {
       <div className={classes.content}>
         <div className={classes.imageContainer}>
           <Image
+            alt="Shankar Sawant!"
             src="/images/profile.jpg"
             height={1000}
             width={1000}
