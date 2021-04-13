@@ -1,14 +1,21 @@
+import classnames from "classnames";
+import { useRouter } from "next/dist/client/router";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import classes from "./Header.module.css";
 
 const menus = [
-  { label: "Home", active: true },
-  { label: "Skills", active: false },
-  { label: "Projects", active: false },
-  { label: "Contact Us", active: false },
+  { label: "Home", href: "/", active: true },
+  { label: "Skills", href: "/skills", active: false },
+  { label: "Projects", href: "/", active: false },
+  { label: "Contact Us", href: "/", active: false },
 ];
 const Header = () => {
+  const router = useRouter();
+
+  const path = router.route;
+
   return (
     <div className={classes.container}>
       <Image
@@ -21,10 +28,16 @@ const Header = () => {
       <ul className={classes.list}>
         {menus.map((el, index) => {
           return (
-            <li key={index} className={classes.item}>
-              {el.label}
-              <div className={classes.border} />
-            </li>
+            <Link key={index} href={el.href}>
+              <li className={classes.item}>
+                {el.label}
+                <div
+                  className={classnames(classes.border, {
+                    [classes.showBorder]: path === el.href,
+                  })}
+                />
+              </li>
+            </Link>
           );
         })}
       </ul>

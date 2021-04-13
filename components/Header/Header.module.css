@@ -40,8 +40,8 @@
   font-weight: bold;
 }
 
-.item:hover > .border,
-.item:first-of-type > .border {
+.showBorder,
+.item:hover > .border {
   transform: scaleX(1);
 }
 

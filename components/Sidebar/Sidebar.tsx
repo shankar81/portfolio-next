@@ -1,17 +1,22 @@
 import Image from "next/image";
+import React from "react";
 import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 import classes from "./Sidebar.module.css";
 
+type SidebarProps = {
+  small: boolean;
+};
+
 const skills = [
-  "HTML5",
-  "CSS3",
-  "Javascript",
+  "JavaScript",
+  "Java",
+  "Kotlin",
+  "SASS",
   "React JS",
   "React Native",
-  "Kotlin",
-  "Java",
+  "Node JS",
 ];
-const Sidebar = () => {
+const Sidebar: React.FC<SidebarProps> = ({ small }) => {
   return (
     <div className={classes.container}>
       <ul className={classes.socials}>
@@ -36,25 +41,27 @@ const Sidebar = () => {
           />
         </div>
 
-        <div className={classes.skills}>
-          {skills.map((el, index) => {
-            let center = Math.round(skills.length / 2) - 1;
-            let margin = index - center;
+        {!small && (
+          <div className={classes.skills}>
+            {skills.map((el, index) => {
+              let center = Math.round(skills.length / 2) - 1;
+              let margin = index - center;
 
-            if (center !== index && margin < 0) {
-              margin = -margin;
-            }
-            return (
-              <h4
-                key={index}
-                style={{ marginLeft: -(margin * 40) }}
-                className={classes.skill}
-              >
-                {el}
-              </h4>
-            );
-          })}
-        </div>
+              if (center !== index && margin < 0) {
+                margin = -margin;
+              }
+              return (
+                <h4
+                  key={index}
+                  style={{ marginLeft: -(margin * 40) }}
+                  className={classes.skill}
+                >
+                  {el}
+                </h4>
+              );
+            })}
+          </div>
+        )}
       </div>
     </div>
   );
