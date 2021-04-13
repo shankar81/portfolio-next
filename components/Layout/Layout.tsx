@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
 import classes from "./Layout.module.css";
 

@@ -1,9 +1,10 @@
+import React from "react";
 import Home from "../components/Home/Home";
 import Layout from "../components/Layout/Layout";
 
-type HomePageProps = {};
+type Landing = {};
 
-const Landing: React.FC<HomePageProps> = ({}) => {
+const Landing: React.FC<Landing> = ({}) => {
   return (
     <Layout>
       <Home />

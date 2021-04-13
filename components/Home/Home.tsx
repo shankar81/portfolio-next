@@ -1,3 +1,4 @@
+import React from "react";
 import { BsDownload } from "react-icons/bs";
 import Button from "../Button/Button";
 import classes from "./Home.module.css";

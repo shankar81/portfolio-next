@@ -37,7 +37,7 @@
   height: 2rem;
   width: 2rem !important;
   border-radius: 50%;
-  border: 1px solid var(--color-Primary-light);
+  border: 2px solid var(--color-Primary-light);
   background-color: var(--color-background);
   z-index: 2;
   transform: scaleX(1) !important;

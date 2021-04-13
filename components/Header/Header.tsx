@@ -8,13 +8,13 @@ import classes from "./Header.module.css";
 const menus = [
   { label: "Home", href: "/", active: true },
   { label: "Skills", href: "/skills", active: false },
-  { label: "Projects", href: "/", active: false },
-  { label: "Contact Us", href: "/", active: false },
+  { label: "Projects", href: "/projects", active: false },
+  { label: "Contact Us", href: "/contact", active: false },
 ];
 const Header = () => {
   const router = useRouter();
 
-  const path = router.route;
+  const path = router?.route;
 
   return (
     <div className={classes.container}>
