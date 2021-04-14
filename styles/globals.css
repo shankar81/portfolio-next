@@ -57,14 +57,5 @@ li {
 
 .icon {
   font-size: 2rem;
-  color: red;
   margin-right: 1.5rem;
-}
-
-.DIV {
-  shape-outside: circle(50%);
-  width: 300px;
-  height: 500px;
-  float: left;
-  opacity: .2;
 }

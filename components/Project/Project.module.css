@@ -1,12 +1,54 @@
+.container:nth-of-type(3n + 0) {
+  margin-right: 0;
+}
+
 .container {
-  padding: 3rem 5rem;
+  margin-bottom: 5rem;
+  margin-right: auto;
+  color: var(--color-Secondary);
 
+  display: flex;
+  flex-direction: column;
+}
 
+.imgContainer {
+  width: 25rem;
 }
 
 .image {
-
+  background-position: center;
+  background-size: cover;
 }
 
 .title {
+  font-size: 1.6rem;
+  color: inherit;
+  text-transform: uppercase;
 }
+
+/* Dashed Border */
+
+/* div {
+  --d: 18deg; //  distance between dashes
+  --n: 10; // number of dashes
+  --c: #000; // color of dashes
+  --b: 2px; // control the thickness of border
+
+  width: 200px;
+  display: inline-block;
+  border-radius: 50%;
+  background: repeating-conic-gradient(
+    var(--c) 0 calc(360deg / var(--n) - var(--d)),
+    transparent 0 calc(360deg / var(--n))
+  );
+  -webkit-mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+  mask: radial-gradient(
+    farthest-side,
+    transparent calc(100% - var(--b)),
+    #fff calc(100% - var(--b) + 1px)
+  );
+} */

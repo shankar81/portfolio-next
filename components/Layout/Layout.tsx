@@ -1,11 +1,16 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import Header from "../Header/Header";
+import Sidebar from "../Sidebar/Sidebar";
 import classes from "./Layout.module.css";
+import classnames from "classnames";
 
 type LayoutProps = {};
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const router = useRouter();
+
   const [theme, setTheme] = useState<string>("light");
 
   useEffect(() => {
@@ -42,11 +47,21 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           />
         </>
       </Head>
-      <div className={classes.content}>
+      <div
+        className={classnames(classes.content, {
+          [classes.smallContent]: router?.route === "/",
+        })}
+      >
         <Header />
         {children}
       </div>
-      <div className={classes.sidebar}>{/* <Sidebar small /> */}</div>
+      <div
+        className={classnames(classes.sidebar, {
+          [classes.snallSideBar]: router?.route !== "/",
+        })}
+      >
+        <Sidebar small={router?.route !== "/"} />
+      </div>
     </div>
   );
 };

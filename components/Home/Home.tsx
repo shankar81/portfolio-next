@@ -15,8 +15,12 @@ const Home = () => {
         temporibus!
       </p>
       <div className={classes.buttons}>
-        <Button label="Download CV" icon={() => <BsDownload />} />
-        <Button type="SECONDARY" label="Hire Me" />
+        <div className={classes.button}>
+          <Button href="/Resume.pdf" target="_blank" label="Download CV" icon={() => <BsDownload />} />
+        </div>
+        <div className={classes.button}>
+          <Button type="SECONDARY" label="Hire Me" />
+        </div>
       </div>
     </div>
   );

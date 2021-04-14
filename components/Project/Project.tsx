@@ -7,12 +7,14 @@ type ProjectProps = {};
 const Project: React.FC<ProjectProps> = () => {
   return (
     <div className={classes.container}>
-      <Image
-        className={classes.image}
-        width={1000}
-        height={1000}
-        src="/images/projects/project1.png"
-      />
+      <div className={classes.imgContainer}>
+        <Image
+          className={classes.image}
+          width={1000}
+          height={1000}
+          src="/images/projects/project1.png"
+        />
+      </div>
       <h3 className={classes.title}>ideas project</h3>
     </div>
   );

@@ -1,0 +1,36 @@
+.container {
+  padding: 3rem 5rem;
+  padding-bottom: 0;
+  color: var(--color-Primary);
+}
+
+.top {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-Primary);
+}
+
+.icon {
+  color: inherit !important;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.heading {
+  font-size: 2rem;
+  color: inherit;
+
+  display: inline-block;
+}
+
+.address {
+  font-size: 1.5rem;
+  color: var(--color-Secondary);
+}
+
+.button {
+  margin-left: auto;
+  width: 15%;
+  align-self: flex-end;
+}

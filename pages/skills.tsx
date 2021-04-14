@@ -28,7 +28,7 @@ const Skills: React.FC<SkillsProps> = () => {
         { title: "React Native", level: 80 },
         { title: "Node JS", level: 60 },
       ]);
-    }, 1000);
+    }, 100);
   }, []);
 
   return (
