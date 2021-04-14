@@ -2,7 +2,7 @@ import React from "react";
 import Button from "../components/Button/Button";
 import Layout from "../components/Layout/Layout";
 import Projects from "../components/Projects/Projects";
-import classes from '../styles/Projects.module.css'
+import classes from '../styles/projects.module.css'
 
 type ProjectPageProps = {};
 

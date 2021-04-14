@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout/Layout";
-import classes from "../styles/Contact.module.css";
+import classes from "../styles/contact.module.css";
 import { IoLocationSharp } from "react-icons/io5";
 import { RiSendPlaneFill } from "react-icons/ri";
 import ContactForm from "../components/ContactForm/ContactForm";
