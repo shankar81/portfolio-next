@@ -68,3 +68,9 @@
 .skill:last-of-type {
   margin: 0;
 }
+
+.switch {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}

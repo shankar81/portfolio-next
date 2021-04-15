@@ -8,10 +8,12 @@ import classnames from "classnames";
 
 type LayoutProps = {};
 
+export type Theme = "light" | "dark";
+
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const router = useRouter();
 
-  const [theme, setTheme] = useState<string>("light");
+  const [theme, setTheme] = useState<Theme>("light");
 
   useEffect(() => {
     document.getElementsByTagName("body")[0].className = `theme-${theme}`;
@@ -67,7 +69,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           [classes.snallSideBar]: router?.route !== "/",
         })}
       >
-        <Sidebar small={router?.route !== "/"} />
+        <Sidebar theme={theme} onChangeTheme={changeTheme} small={router?.route !== "/"} />
       </div>
     </div>
   );

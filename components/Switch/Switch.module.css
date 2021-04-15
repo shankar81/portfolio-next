@@ -1,0 +1,42 @@
+.container {
+  background-color: var(--color-Primary-light);
+  border-radius: 10rem;
+  position: relative;
+  user-select: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.7rem;
+  padding: 0 0.8rem;
+}
+
+.icon:last-of-type {
+  padding-left: 0;
+}
+
+.thumb {
+  height: 90%;
+  width: 40%;
+  border-radius: 50%;
+  background-color: var(--color-Primary);
+  position: absolute;
+  left: 0.2rem;
+  transform: translateX(135%);
+  transition: 0.3s box-shadow, 0.3s transform ease;
+}
+
+.container:hover .thumb {
+  box-shadow: 0 0 2px 3px var(--color-Primary-light);
+}
+
+.container:active .thumb {
+  box-shadow: 0 0 5px 5px var(--color-Primary-light);
+}
+
+.darkMode {
+  transform: translateX(0%);
+}
