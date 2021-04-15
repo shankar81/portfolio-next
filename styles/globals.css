@@ -59,3 +59,7 @@ li {
   font-size: 2rem;
   margin-right: 1.5rem;
 }
+
+.container {
+  padding: 3rem 5rem;
+}

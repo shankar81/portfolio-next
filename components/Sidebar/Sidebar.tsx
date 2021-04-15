@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 import classes from "./Sidebar.module.css";
 
 type SidebarProps = {
@@ -20,15 +20,27 @@ const Sidebar: React.FC<SidebarProps> = ({ small }) => {
   return (
     <div className={classes.container}>
       <ul className={classes.socials}>
-        <li className={classes.socialIcon}>
-          <FaFacebookF />
-        </li>
-        <li className={classes.socialIcon}>
+        <a
+          target="__blank"
+          href="https://github.com/shankar81"
+          className={classes.socialIcon}
+        >
+          <FaGithub />
+        </a>
+        <a
+          target="__blank"
+          href="https://twitter.com/shankarswnt"
+          className={classes.socialIcon}
+        >
           <FaTwitter />
-        </li>
-        <li className={classes.socialIcon}>
+        </a>
+        <a
+          target="__blank"
+          href="https://www.linkedin.com/in/shankar-sawant-577968149/"
+          className={classes.socialIcon}
+        >
           <FaLinkedinIn />
-        </li>
+        </a>
       </ul>
       <div className={classes.content}>
         <div className={classes.imageContainer}>

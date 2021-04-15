@@ -16,9 +16,14 @@ const Header = () => {
 
   const path = router?.route;
 
+  function handleOnClick() {
+    router.replace("/");
+  }
+
   return (
     <div className={classes.container}>
       <Image
+        onClick={handleOnClick}
         alt="Personal Portfolio"
         className={classes.image}
         src="/images/logo.svg"

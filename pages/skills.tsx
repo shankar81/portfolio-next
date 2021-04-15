@@ -32,11 +32,11 @@ const Skills: React.FC<SkillsProps> = () => {
 
   return (
     <Layout>
-      {/* <div className={classes.container}> */}
-      {skills.map((el, index) => {
-        return <ProgressBar key={index} title={el.title} level={el.level} />;
-      })}
-      {/* </div> */}
+      <div className="container">
+        {skills.map((el, index) => {
+          return <ProgressBar key={index} title={el.title} level={el.level} />;
+        })}
+      </div>
     </Layout>
   );
 };
