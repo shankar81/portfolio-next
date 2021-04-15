@@ -8,15 +8,33 @@ type ButtonProps = {
   type?: "PRIMARY" | "SECONDARY";
   href?: string;
   target?: string;
+  onClick?: () => void;
 };
-const Button: React.FC<ButtonProps> = ({ icon, label, type, href, target }) => {
+const Button: React.FC<ButtonProps> = ({
+  icon,
+  label,
+  type,
+  href,
+  target,
+  onClick,
+}) => {
   const containerClasses = [classes.container];
 
   if (type === "SECONDARY") {
     containerClasses.push(classes.secondaryContainer);
   }
-  return (
-    <a href={href} target="_blank" className={classnames(containerClasses)}>
+  return onClick && !href ? (
+    <button onClick={onClick} className={classnames(containerClasses)}>
+      {icon && icon()}
+      <p className={classes.label}>{label}</p>
+    </button>
+  ) : (
+    <a
+      onClick={onClick}
+      href={href}
+      target={target}
+      className={classnames(containerClasses)}
+    >
       {icon && icon()}
       <p className={classes.label}>{label}</p>
     </a>

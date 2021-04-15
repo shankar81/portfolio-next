@@ -40,7 +40,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             property="og:description"
             content="Shankar Sawant - A developer - He/Him. Javascript Everywhere - FrontEnd Developer - Mobile / Website Developer."
           />
-          <meta property="og:image" content="/images/profile.jpg" />
+          <meta
+            property="og:image"
+            content={`${window.location.origin}/images/profile.jpg`}
+          />
+          <meta
+            property="image"
+            content={`${window.location.origin}/images/profile.jpg`}
+          />
           <meta
             property="og:url"
             content="https://shankar-sawant.vercel.app/"

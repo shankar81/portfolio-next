@@ -1,6 +1,11 @@
+.container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
 .input {
   width: 100%;
-  margin-bottom: 2rem;
   border: 1.5px solid #aaa;
   border-radius: 10rem;
   padding: 1.3rem 2rem;
@@ -17,4 +22,12 @@
 
 .textarea {
   border-radius: 1rem !important;
+}
+
+.error {
+  font-size: 1.2rem;
+  color: var(--color-error);
+  margin-top: 0.2rem;
+
+  position: absolute;
 }

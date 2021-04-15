@@ -9,6 +9,7 @@ type FormInputProps = {
   half?: boolean;
   onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>;
   max: number;
+  error?: string;
 };
 
 const FormInput: React.FC<FormInputProps> = ({
@@ -18,29 +19,35 @@ const FormInput: React.FC<FormInputProps> = ({
   multiline,
   half,
   max,
+  error,
 }) => {
-  return !multiline ? (
-    <input
-      maxLength={max}
-      type="text"
-      className={classnames(classes.input, {
+  return (
+    <div
+      className={classnames(classes.container, {
         [classes.half]: half,
       })}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-    />
-  ) : (
-    <textarea
-      rows={5}
-      maxLength={max}
-      className={classnames(classes.input, classes.textarea, {
-        [classes.half]: half,
-      })}
-      placeholder={placeholder}
-      value={value}
-      onChange={onChange}
-    />
+    >
+      {!multiline ? (
+        <input
+          maxLength={max}
+          type="text"
+          className={classes.input}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+      ) : (
+        <textarea
+          rows={5}
+          maxLength={max}
+          className={classnames(classes.input, classes.textarea)}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+      )}
+      {error && <p className={classes.error}>{error}</p>}
+    </div>
   );
 };
 

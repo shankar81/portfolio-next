@@ -4,6 +4,8 @@
 
   --color-Secondary: #4b4b4b;
   --color-background: #ffffff;
+
+  --color-error: red;
 }
 
 .theme-dark {
@@ -12,6 +14,8 @@
 
   --color-Secondary: #4b4b4b;
   --color-background: #333333;
+
+  --color-error: red;
 }
 
 * {
