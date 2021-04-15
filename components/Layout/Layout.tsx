@@ -42,11 +42,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           />
           <meta
             property="og:image"
-            content={`${window.location.origin}/images/profile.jpg`}
+            content={"https://shankar-sawant.vercel.app/images/profile.jpg"}
           />
           <meta
             property="image"
-            content={`${window.location.origin}/images/profile.jpg`}
+            content={"https://shankar-sawant.vercel.app/images/profile.jpg"}
           />
           <meta
             property="og:url"
