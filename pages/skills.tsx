@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout/Layout";
 import ProgressBar from "./../components/ProgressBar/ProgressBar";
 
 type SkillsProps = {};
@@ -31,13 +30,11 @@ const Skills: React.FC<SkillsProps> = () => {
   }, []);
 
   return (
-    <Layout>
-      <div className="container">
-        {skills.map((el, index) => {
-          return <ProgressBar key={index} title={el.title} level={el.level} />;
-        })}
-      </div>
-    </Layout>
+    <div className="container">
+      {skills.map((el, index) => {
+        return <ProgressBar key={index} title={el.title} level={el.level} />;
+      })}
+    </div>
   );
 };
 

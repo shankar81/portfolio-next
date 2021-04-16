@@ -6,6 +6,8 @@
 
 .input {
   width: 100%;
+  color: var(--color-Secondary);
+  background-color: var(--color-background);
   border: 1.5px solid #aaa;
   border-radius: 10rem;
   padding: 1.3rem 2rem;

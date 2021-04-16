@@ -1,14 +1,11 @@
 import Image from "next/image";
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
-import { Theme } from "../Layout/Layout";
 import Switch from "../Switch/Switch";
 import classes from "./Sidebar.module.css";
 
 type SidebarProps = {
   small: boolean;
-  theme: Theme;
-  onChangeTheme: () => void;
 };
 
 const skills = [
@@ -20,7 +17,7 @@ const skills = [
   "React Native",
   "Node JS",
 ];
-const Sidebar: React.FC<SidebarProps> = ({ small, onChangeTheme, theme }) => {
+const Sidebar: React.FC<SidebarProps> = ({ small }) => {
   return (
     <div className={classes.container}>
       <ul className={classes.socials}>
@@ -81,7 +78,7 @@ const Sidebar: React.FC<SidebarProps> = ({ small, onChangeTheme, theme }) => {
       </div>
 
       <div className={classes.switch}>
-        <Switch theme={theme} onChangeTheme={onChangeTheme} />
+        <Switch />
       </div>
     </div>
   );

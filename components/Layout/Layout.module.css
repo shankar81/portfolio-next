@@ -7,7 +7,7 @@
 
 .content {
   position: relative;
-  width: 75%;
+  width: 80%;
   background-color: var(--color-background);
   z-index: 1;
   min-height: 100vh;
@@ -30,7 +30,7 @@
   background-image: linear-gradient(
     to right top,
     var(--color-Primary),
-    var(--color-Secondary)
+    var(--color-gradient)
   );
 }
 

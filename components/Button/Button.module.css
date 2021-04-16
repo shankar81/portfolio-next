@@ -5,7 +5,7 @@
     var(--color-Primary),
     var(--color-Secondary)
   );
-  color: var(--color-background);
+  color: var(--color-onPrimary);
   border-radius: 10rem;
   padding: 1.2rem 2.5rem;
   width: 100%;

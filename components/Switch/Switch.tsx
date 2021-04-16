@@ -1,16 +1,12 @@
-import React from "react";
-import { Theme } from "../Layout/Layout";
-import classes from "./Switch.module.css";
 import classnames from "classnames";
+import React, { useContext } from "react";
+import ThemeProvider from "../../contexts/ThemeProvider";
+import classes from "./Switch.module.css";
 
-type SwitchPrps = {
-  onChangeTheme: () => void;
-  theme: Theme;
-};
-
-const Switch: React.FC<SwitchPrps> = ({ onChangeTheme, theme }) => {
+const Switch: React.FC = () => {
+  const { onToggleTheme, theme } = useContext(ThemeProvider);
   return (
-    <div onClick={onChangeTheme} className={classes.container}>
+    <div onClick={onToggleTheme} className={classes.container}>
       <span className={classes.icon}>🌜</span>
       <span className={classes.icon}>🌞</span>
       <div

@@ -12,6 +12,7 @@
 .socials {
   list-style: none;
   width: 13rem;
+  z-index: 5;
 
   display: flex;
   align-items: flex-end;
@@ -62,7 +63,7 @@
 .skill {
   font-size: 2rem;
   margin-bottom: 4rem;
-  color: var(--color-background);
+  color: var(--color-onPrimary);
 }
 
 .skill:last-of-type {
@@ -70,7 +71,8 @@
 }
 
 .switch {
-  position: absolute;
+  position: fixed;
   bottom: 2rem;
   right: 2rem;
+  z-index: 5;
 }

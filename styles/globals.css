@@ -5,23 +5,31 @@
   --color-Secondary: #4b4b4b;
   --color-background: #ffffff;
 
-  --color-error: red;
+  --color-onPrimary: #ffffff;
+
+  --color-gradient: #555555;
+
+  --color-error: #f55000;
 }
 
 .theme-dark {
   --color-Primary: #2c6291;
   --color-Primary-light: #afcde5;
 
-  --color-Secondary: #4b4b4b;
-  --color-background: #333333;
+  --color-Secondary: #aaaaaa;
+  --color-background: #080808;
 
-  --color-error: red;
+  --color-onPrimary: #ffffff;
+
+  --color-gradient: #000000;
+
+  --color-error: #f55000;
 }
 
 * {
   margin: 0;
   padding: 0;
-  transition: 0.2s color;
+  transition: 0.2s color, 0.2s background, 0.2s width;
 }
 
 *:focus {
