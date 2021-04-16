@@ -14,15 +14,26 @@ export type Theme = "light" | "dark";
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const router = useRouter();
 
-  /**
-   * * @TODO
-   * Provide this values via context not by props
-   */
   const [theme, setTheme] = useState<Theme>("light");
+
+  useEffect(() => {
+    setUpTheme();
+  }, []);
 
   useEffect(() => {
     document.getElementsByTagName("body")[0].className = `theme-${theme}`;
   }, [theme]);
+
+  function setUpTheme() {
+    const darkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(darkTheme ? "dark" : "light");
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        setTheme(e.matches ? "dark" : "light");
+      });
+  }
 
   function changeTheme() {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));

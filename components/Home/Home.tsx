@@ -1,9 +1,16 @@
+import { useRouter } from "next/router";
 import React from "react";
 import { BsDownload } from "react-icons/bs";
 import Button from "../Button/Button";
 import classes from "./Home.module.css";
 
 const Home = () => {
+  const router = useRouter();
+
+  function handleHireMe() {
+    router.push("/contact");
+  }
+
   return (
     <div className={classes.container}>
       <h1 className={classes.title}>Shankar Sawant</h1>
@@ -16,10 +23,15 @@ const Home = () => {
       </p>
       <div className={classes.buttons}>
         <div className={classes.button}>
-          <Button href="/Resume.pdf" target="_blank" label="Download CV" icon={() => <BsDownload />} />
+          <Button
+            href="/Resume.pdf"
+            target="_blank"
+            label="Download CV"
+            icon={() => <BsDownload />}
+          />
         </div>
         <div className={classes.button}>
-          <Button type="SECONDARY" label="Hire Me" />
+          <Button type="SECONDARY" onClick={handleHireMe} label="Hire Me" />
         </div>
       </div>
     </div>

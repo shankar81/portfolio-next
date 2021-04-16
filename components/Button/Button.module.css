@@ -3,7 +3,7 @@
   background-image: linear-gradient(
     to left,
     var(--color-Primary),
-    var(--color-Secondary)
+    var(--color-gradient)
   );
   color: var(--color-onPrimary);
   border-radius: 10rem;
