@@ -3,9 +3,11 @@ import { Theme } from "../components/Layout/Layout";
 
 type ThemeProviderType = { theme: Theme; onToggleTheme: () => void };
 
-const ThemeProvider = React.createContext<ThemeProviderType>({
+const ThemeContext = React.createContext<ThemeProviderType>({
   theme: "light",
   onToggleTheme: () => {},
 });
 
-export default ThemeProvider;
+export const ThemeProvider = ThemeContext.Provider;
+
+export default ThemeContext;

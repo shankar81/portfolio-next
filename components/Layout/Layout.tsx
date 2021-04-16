@@ -2,7 +2,7 @@ import classnames from "classnames";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import ThemeProvider from "../../contexts/ThemeProvider";
+import { ThemeProvider } from "../../contexts/ThemeProvider";
 import Header from "../Header/Header";
 import Sidebar from "../Sidebar/Sidebar";
 import classes from "./Layout.module.css";
@@ -29,7 +29,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   }
 
   return (
-    <ThemeProvider.Provider value={{ onToggleTheme: changeTheme, theme }}>
+    <ThemeProvider value={{ onToggleTheme: changeTheme, theme }}>
       <div className={classes.container}>
         <Head>
           <>
@@ -78,7 +78,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Sidebar small={router?.route !== "/"} />
         </div>
       </div>
-    </ThemeProvider.Provider>
+    </ThemeProvider>
   );
 };
 

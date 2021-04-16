@@ -1,10 +1,10 @@
 import classnames from "classnames";
 import React, { useContext } from "react";
-import ThemeProvider from "../../contexts/ThemeProvider";
+import ThemeContext from "../../contexts/ThemeProvider";
 import classes from "./Switch.module.css";
 
 const Switch: React.FC = () => {
-  const { onToggleTheme, theme } = useContext(ThemeProvider);
+  const { onToggleTheme, theme } = useContext(ThemeContext);
   return (
     <div onClick={onToggleTheme} className={classes.container}>
       <span className={classes.icon}>🌜</span>
