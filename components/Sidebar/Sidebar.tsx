@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ small }) => {
         </a>
       </ul>
       <div className={classes.content}>
-        {/* <div className={classes.imageContainer}>
+        <div className={classes.imageContainer}>
           <Image
             alt="Shankar Sawant!"
             src="/images/profile.jpg"
@@ -52,7 +52,7 @@ const Sidebar: React.FC<SidebarProps> = ({ small }) => {
             width={1000}
             className={classes.image}
           />
-        </div> */}
+        </div>
 
         {!small && (
           <div className={classes.skills}>
