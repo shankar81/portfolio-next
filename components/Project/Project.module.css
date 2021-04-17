@@ -6,24 +6,74 @@
   margin-bottom: 5rem;
   margin-right: auto;
   color: var(--color-Secondary);
+  max-width: 30%;
 
   display: flex;
   flex-direction: column;
 }
 
+.preview {
+  width: 24rem;
+  height: 35rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-Secondary);
+  padding: 0.5rem;
+  padding-bottom: 0;
+  border-radius: 0.3rem;
+  filter: brightness(60%);
+  cursor: pointer;
+  transition: 0.3s filter;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.preview:hover,
+.preview:focus {
+  filter: brightness(100%);
+}
+
 .imgContainer {
-  width: 25rem;
+  width: 49%;
+  height: 48%;
+  margin-bottom: auto;
 }
 
 .image {
+  height: 100%;
+  width: 100%;
   background-position: center;
   background-size: cover;
+  border-radius: 0.3rem;
+}
+
+.content {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+}
+
+.content svg {
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+
+.content:hover svg {
+  opacity: 1;
+}
+
+.content:hover .title {
+  opacity: 1;
+  color: var(--color-Primary);
 }
 
 .title {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: inherit;
-  text-transform: uppercase;
+  margin-right: 0.5rem;
+  transition: 0.3s color;
 }
 
 /* Dashed Border */

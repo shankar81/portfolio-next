@@ -1,21 +1,42 @@
-import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
+import { RiExternalLinkLine } from "react-icons/ri";
 import classes from "./Project.module.css";
 
-type ProjectProps = {};
+type ProjectProps = {
+  data: { title: string; images: Array<string>; link: string };
+};
 
-const Project: React.FC<ProjectProps> = () => {
+const Project: React.FC<ProjectProps> = ({ data }) => {
+  const router = useRouter();
+
+  const { images, title, link } = data;
+
+  // Only allowed 4 images to show
+  const previewImages = images;
+  previewImages.length = 4;
+
+  function handleNavigate() {
+    window.open(link);
+  }
+
   return (
     <div className={classes.container}>
-      <div className={classes.imgContainer}>
-        <Image
-          className={classes.image}
-          width={1000}
-          height={1000}
-          src="/images/projects/project1.png"
-        />
+      <div className={classes.preview}>
+        {previewImages.map((el, index) => {
+          return (
+            <div key={index} className={classes.imgContainer}>
+              <img className={classes.image} alt={title} src={el} />
+            </div>
+          );
+        })}
       </div>
-      <h3 className={classes.title}>ideas project</h3>
+      <div className={classes.content}>
+        <h3 onClick={handleNavigate} className={classes.title}>
+          {title}
+        </h3>
+        <RiExternalLinkLine color="#2c6291" />
+      </div>
     </div>
   );
 };
