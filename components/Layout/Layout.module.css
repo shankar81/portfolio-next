@@ -1,5 +1,7 @@
 .container {
+  position: relative;
   width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
 
   display: flex;
@@ -34,6 +36,54 @@
   );
 }
 
-.snallSideBar {
+.smallSideBar {
   width: 20%;
+}
+
+@media only screen and (max-width: 1350px) {
+  .content {
+    height: 70vh;
+    width: 80%;
+  }
+
+  .sidebar {
+    width: 30%;
+  }
+
+  .smallSideBar {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .content {
+    height: auto;
+    width: 90%;
+  }
+
+  .sidebar {
+    width: 35%;
+  }
+
+  .smallSideBar {
+    width: 20%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    min-height: 70vh;
+    width: 100%;
+  }
+
+  .sidebar {
+    height: 30vh;
+    min-height: auto;
+    width: 100%;
+    position: relative;
+  }
 }

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { BiMenu } from "react-icons/bi";
 import Switch from "../Switch/Switch";
 import classes from "./Sidebar.module.css";
 
@@ -21,6 +22,9 @@ const Sidebar: React.FC<SidebarProps> = ({ small }) => {
   return (
     <div className={classes.container}>
       <ul className={classes.socials}>
+        <div className={classes.menu}>
+          <BiMenu size={20} />
+        </div>
         <a
           target="__blank"
           href="https://github.com/shankar81"

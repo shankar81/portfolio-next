@@ -69,3 +69,31 @@
   visibility: hidden;
   opacity: 0;
 }
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    width: 80%;
+    margin-bottom: 5rem;
+  }
+
+  .progress {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .progress {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}

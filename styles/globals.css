@@ -75,3 +75,23 @@ li {
 .container {
   padding: 3rem 5rem;
 }
+
+@media only screen and (max-width: 950px) {
+  .container {
+    padding: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-top: 13rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 50%;
+  }
+}

@@ -83,7 +83,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
         <div
           className={classnames(classes.sidebar, {
-            [classes.snallSideBar]: router?.route !== "/",
+            [classes.smallSideBar]: router?.route !== "/",
           })}
         >
           <Sidebar small={router?.route !== "/"} />

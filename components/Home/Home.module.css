@@ -42,3 +42,55 @@
 .button {
   width: 48%;
 }
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    padding: 2rem 5rem;
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .container {
+    width: 90%;
+    margin: 0;
+
+    align-self: center;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .desc {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .role {
+    font-size: 2rem;
+  }
+
+  .buttons {
+    width: 100%;
+  }
+}
