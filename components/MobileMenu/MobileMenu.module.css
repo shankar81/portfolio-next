@@ -5,11 +5,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(
-    to right top,
-    var(--color-Primary),
-    #000
-  );
+  background-image: linear-gradient(to right top, var(--color-Primary), #000);
   z-index: 20;
   transition: all 0.3s;
 
@@ -64,4 +60,9 @@
 
 .active {
   border-bottom: 5px solid var(--color-Secondary);
+}
+
+@media only screen and (min-width: 950px) {
+  .container {display: none;
+  }
 }
