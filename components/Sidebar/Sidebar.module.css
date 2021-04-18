@@ -124,6 +124,11 @@
 
     z-index: 50;
   }
+
+  .switch {
+    bottom: 4rem;
+    right: 4rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
