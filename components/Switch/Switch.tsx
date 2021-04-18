@@ -1,6 +1,6 @@
 import classnames from "classnames";
 import React, { useContext } from "react";
-import ThemeContext from "../../contexts/ThemeProvider";
+import ThemeContext from "../../contexts/ThemeContext";
 import classes from "./Switch.module.css";
 
 const Switch: React.FC = () => {

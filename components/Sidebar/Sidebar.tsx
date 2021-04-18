@@ -1,7 +1,8 @@
 import Image from "next/image";
-import React from "react";
-import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import React, { useContext } from "react";
 import { BiMenu } from "react-icons/bi";
+import { FaGithub, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import GlobalContext from "../../contexts/GlobalContext";
 import Switch from "../Switch/Switch";
 import classes from "./Sidebar.module.css";
 
@@ -19,11 +20,13 @@ const skills = [
   "Node JS",
 ];
 const Sidebar: React.FC<SidebarProps> = ({ small }) => {
+  const { onToggleMenu } = useContext(GlobalContext);
+
   return (
     <div className={classes.container}>
       <ul className={classes.socials}>
-        <div className={classes.menu}>
-          <BiMenu size={20} />
+        <div onClick={onToggleMenu} className={classes.menu}>
+          <BiMenu size={25} />
         </div>
         <a
           target="__blank"
