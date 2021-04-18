@@ -8,7 +8,7 @@
   background-image: linear-gradient(
     to right top,
     var(--color-Primary),
-    rgba(0, 0, 0, 0.9)
+    #000
   );
   z-index: 20;
   transition: all 0.3s;
@@ -34,7 +34,7 @@
   font-size: 5rem;
   text-transform: none;
   margin-bottom: 5rem;
-  color: var(--color-Secondary);
+  color: var(--color-onPrimary);
   border-bottom: 5px solid transparent;
   cursor: pointer;
   transition: border 0.3s;
