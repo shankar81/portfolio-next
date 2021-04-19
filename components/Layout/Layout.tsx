@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { GlobalProvider } from "../../contexts/GlobalContext";
 import { ThemeProvider } from "../../contexts/ThemeContext";
 import Header from "../Header/Header";
+import MetaHead from "../MetaHead/MetaHead";
 import MobileMenu from "../MobileMenu/MobileMenu";
 import Sidebar from "../Sidebar/Sidebar";
 import classes from "./Layout.module.css";
@@ -55,37 +56,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <ThemeProvider value={{ onToggleTheme: changeTheme, theme }}>
       <GlobalProvider value={{ isMenuOpen: showMenu, onToggleMenu: openMenu }}>
         <div className={classes.container}>
-          <Head>
-            <>
-              <link rel="preconnect" href="https://fonts.gstatic.com" />
-              <link
-                href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
-                rel="stylesheet"
-              />
-              <meta
-                name="description"
-                content="Shankar Sawant - A developer - He/Him. Javascript Everywhere - FrontEnd Developer - Mobile / Website Developer."
-              ></meta>
-              <title>Shankar Sawant - Portfolio</title>
-              <meta property="og:title" content="Shankar Sawant - Portfolio" />
-              <meta
-                property="og:description"
-                content="Shankar Sawant - A developer - He/Him. Javascript Everywhere - FrontEnd Developer - Mobile / Website Developer."
-              />
-              <meta
-                property="og:image"
-                content={"https://shankar-sawant.vercel.app/images/profile.jpg"}
-              />
-              <meta
-                property="image"
-                content={"https://shankar-sawant.vercel.app/images/profile.jpg"}
-              />
-              <meta
-                property="og:url"
-                content="https://shankar-sawant.vercel.app/"
-              />
-            </>
-          </Head>
+          <MetaHead />
           <div
             className={classnames(classes.content, {
               [classes.smallContent]: router?.route === "/",

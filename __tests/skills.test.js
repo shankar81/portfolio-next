@@ -8,6 +8,6 @@ describe("Empty test", () => {
   test("Verify Skills page", () => {
     const { getByText } = render(<Skills />);
 
-    expect(getByText("Skills")).toBeTruthy();
+    expect(getByText("JavaScript")).toBeTruthy();
   });
 });

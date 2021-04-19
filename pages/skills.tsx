@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ProgressBar from "./../components/ProgressBar/ProgressBar";
+import MetaHead from "./../components/MetaHead/MetaHead";
 
 type SkillsProps = {};
 
@@ -31,6 +32,10 @@ const Skills: React.FC<SkillsProps> = () => {
 
   return (
     <div className="container">
+      <MetaHead
+        url="https://shankar-sawant.vercel.app/skills"
+        title="Shankar Sawant - Skills"
+      />
       {skills.map((el, index) => {
         return <ProgressBar key={index} title={el.title} level={el.level} />;
       })}

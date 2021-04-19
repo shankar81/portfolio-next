@@ -26,7 +26,12 @@ const Project: React.FC<ProjectProps> = ({ data }) => {
         {previewImages.map((el, index) => {
           return (
             <div key={index} className={classes.imgContainer}>
-              <img className={classes.image} alt={title} src={el} />
+              <img
+                className={classes.image}
+                alt={title}
+                src={el}
+                loading="lazy"
+              />
             </div>
           );
         })}

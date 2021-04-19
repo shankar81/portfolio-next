@@ -1,11 +1,10 @@
-import React, { useContext } from "react";
-import classes from "./MobileMenu.module.css";
 import classnames from "classnames";
-import GlobalContext from "../../contexts/GlobalContext";
-import { CgClose } from "react-icons/cg";
-import { useRouter } from "next/router";
-import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import React, { useContext } from "react";
+import { CgClose } from "react-icons/cg";
+import GlobalContext from "../../contexts/GlobalContext";
+import classes from "./MobileMenu.module.css";
 
 const menus = [
   { label: "Home", href: "/", active: true },
@@ -22,6 +21,7 @@ const MobileMenu = () => {
   const path = router?.route;
 
   function handleOnClick() {
+    onToggleMenu();
     router.replace("/");
   }
 
@@ -42,6 +42,7 @@ const MobileMenu = () => {
       <div onClick={handleOnClick} className={classes.brand}>
         <Image
           alt="Personal Portfolio"
+          loading="lazy"
           src="/images/logo.svg"
           width={130}
           height={50}

@@ -8,7 +8,8 @@
     "start": "next start",
     "test-init": "jest --init",
     "test-clear": "jest --clearCache",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test-report": "jest -U"
   },
   "dependencies": {
     "@babel/preset-react": "^7.13.13",

@@ -81,7 +81,7 @@ const ContactForm = () => {
             value={name}
           />
           <FormInput
-            max={20}
+            max={15}
             onChange={onChangeNumber}
             half
             error={errors.number}
