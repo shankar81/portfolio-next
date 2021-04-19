@@ -26,8 +26,8 @@
 }
 
 .desc {
-  margin: 2rem 0;
   font-size: 1.6rem;
+  margin: 2rem 0;
   color: inherit;
 }
 
@@ -41,6 +41,13 @@
 
 .button {
   width: 48%;
+}
+
+.highlight {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-Primary);
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1100px) {

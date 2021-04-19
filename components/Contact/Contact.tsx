@@ -11,7 +11,11 @@ const Contact = () => {
         <h3 className={classes.heading}>Address</h3>
         <address className={classes.address}>
           B/8, Ganesh Sadan, Ashokvan, Shiv-Vallabh Road, Dahisar East, Mumbai -
-          400068
+          400068.
+          <br />
+          shankarsawant81@gmail.com
+          <br />
+          9699895355
         </address>
       </div>
       <ContactForm />

@@ -16,10 +16,11 @@ const Home = () => {
       <h1 className={classes.title}>Shankar Sawant</h1>
       <h3 className={classes.role}>Frontend developer</h3>
       <p className={classes.desc}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, at
-        cupiditate optio nostrum quo repudiandae doloribus quidem ratione quas,
-        placeat nam. Tempore voluptates blanditiis expedita sequi cum nam, ullam
-        temporibus!
+        I’m a soft­ware devel­op­er from Mumbai, India. Currently working on Web
+        and Cross-Platoform application using JavaScript. This portfolio is
+        developed using <span className={classes.highlight}>Next JS</span> for
+        Front-End And <span className={classes.highlight}>Node JS</span> -{" "}
+        <span className={classes.highlight}>Mongo DB</span> for Back-End.
       </p>
       <div className={classes.buttons}>
         <div className={classes.button}>
