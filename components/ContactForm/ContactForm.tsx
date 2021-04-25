@@ -43,25 +43,32 @@ const ContactForm = () => {
     const isEmailValid = validateEmail(email);
     const isPhoneValid = validatePhone(number);
 
-    if (!isEmailValid) {
-      err.email = "Please enter a valid email as: example@gmail.com";
-    }
+    // if (!isEmailValid) {
+    //   err.email = "Please enter a valid email as: example@gmail.com";
+    // }
 
-    if (!isPhoneValid) {
-      err.number = "Please enter a valid phone number!";
-    }
+    // if (!isPhoneValid) {
+    //   err.number = "Please enter a valid phone number!";
+    // }
 
-    if (name.length < 3) {
-      err.name = "Name should be atleast 3 characters long!";
-    }
+    // if (name.length < 3) {
+    //   err.name = "Name should be atleast 3 characters long!";
+    // }
 
-    if (message.length < 10) {
-      err.message = "Message should contain atleast 10 letters!";
-    }
+    // if (message.length < 10) {
+    //   err.message = "Message should contain atleast 10 letters!";
+    // }
 
     // If no validation errors
     if (Object.keys(err).length === 0) {
       // Post the form details to API
+      fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json;charset=UTF-8",
+        },
+        body: JSON.stringify({ email, phone: number, name, message }),
+      });
     }
 
     setErrors(err);
